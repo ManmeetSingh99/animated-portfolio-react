@@ -1,0 +1,188 @@
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 100vh; /* Ensure the section takes at least 100vh */
+  padding: 40px 20px; /* Add padding on left and right */
+  background: linear-gradient(180deg, #111132, #0c0c1d);
+  color: white;
+
+  .textContainer {
+    width: 45%; /* Reduced width */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h1 {
+      font-size: 36px; /* Reduced font size */
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 28px; /* Reduced font size */
+      margin-bottom: 20px;
+      color: orange;
+    }
+
+    p {
+      font-size: 16px; /* Reduced font size */
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px; /* Reduced padding */
+      background-color: orange;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 14px; /* Reduced font size */
+      align-self: start;
+      &:hover {
+        background-color: darkorange;
+      }
+    }
+
+    .rolesContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .role {
+        padding: 10px; /* Reduced padding */
+        border: 2px solid orange;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: orange;
+          color: #111132;
+        }
+
+        h3 {
+          margin: 0;
+          font-size: 20px; /* Reduced font size */
+        }
+
+        p {
+          font-size: 14px; /* Reduced font size */
+          margin: 10px 0 0 0;
+        }
+      }
+    }
+  }
+
+  .photoContainer {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 80%;
+      border-radius: 15px;
+      border: 5px solid orange;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 20px;
+
+    .textContainer,
+    .photoContainer {
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .photoContainer {
+      margin-top: 20px;
+
+      img {
+        width: 60%;
+        border-radius: 15px;
+        border: 3px solid orange;
+      }
+    }
+
+    .textContainer {
+      h1 {
+        font-size: 28px; /* Further reduced font size */
+      }
+
+      h2 {
+        font-size: 24px; /* Further reduced font size */
+      }
+
+      p {
+        font-size: 14px; /* Further reduced font size */
+      }
+
+      button {
+        font-size: 12px; /* Further reduced font size */
+        padding: 8px 16px; /* Further reduced padding */
+      }
+
+      .rolesContainer {
+        .role {
+          padding: 8px; /* Further reduced padding */
+
+          h3 {
+            font-size: 18px; /* Further reduced font size */
+          }
+
+          p {
+            font-size: 12px; /* Further reduced font size */
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px;
+
+    .photoContainer {
+      img {
+        width: 80%;
+      }
+    }
+
+    .textContainer {
+      h1 {
+        font-size: 24px; /* Further reduced font size */
+      }
+
+      h2 {
+        font-size: 20px; /* Further reduced font size */
+      }
+
+      p {
+        font-size: 12px; /* Further reduced font size */
+      }
+
+      button {
+        font-size: 10px; /* Further reduced font size */
+        padding: 6px 12px; /* Further reduced padding */
+      }
+
+      .rolesContainer {
+        .role {
+          padding: 6px; /* Further reduced padding */
+
+          h3 {
+            font-size: 16px; /* Further reduced font size */
+          }
+
+          p {
+            font-size: 10px; /* Further reduced font size */
+          }
+        }
+      }
+    }
+  }
+}
